@@ -7,3 +7,6 @@
 [submodule ".vim/bundle/vim-fugitive"]
 	path = .vim/bundle/vim-fugitive
 	url = git://github.com/tpope/vim-fugitive.git
+[submodule ".vim/bundle/vim-blockle"]
+	path = .vim/bundle/vim-blockle
+	url = https://github.com/dwaller/vim-blockle.git
