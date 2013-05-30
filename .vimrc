@@ -80,6 +80,10 @@ nmap <silent> sf :FufFile<CR>
 " Search for a buffer using FuzzyFinder
 nmap <silent> sb :FufBuffer<CR>
 
+" Grep for the word under the cursor.
+nnoremap <leader>g :grep '\b<cword>\b' .<CR>
+
+" Useful defaults for grepping a Rails app.
 set grepprg=grep\ -InR\ --include=*.erb\ --include=*.rb\ --include=*.rake\ $*
 
 " vim-gitgutter - set background colour to the same as the line number column.
