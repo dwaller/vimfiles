@@ -45,8 +45,23 @@ set hidden
 " Automatically load changed files.
 set autoread
 
+" *** Searching ***
+" Ignore case unless there is some uppercase in the string
+set ignorecase
+set smartcase
+" Always match all occurrences on a line.  When do you ever want something else?
+set gdefault
 " Make searching (using /) incremental (turn this off with "set incsearch!")
 set incsearch
+" Highlight search results
+set showmatch
+set hlsearch
+" Clear search highlighting
+nnoremap <leader><space> :noh<cr>
+
+" Jump to matching bracket on tab.
+nnoremap <tab> %
+vnoremap <tab> %
 
 " F7 and F8 to move to next/previous buffer
 nmap <F7> :bp<CR>
