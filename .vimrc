@@ -136,6 +136,10 @@ vmap <F2> :w !pbcopy<CR><CR>
 " Remap leader from \ to , which is easier to hit, and a common remapping.
 let mapleader = ","
 
+" Reselect the text just pasted so I can perform commands (like indentation) on
+" it.  http://stevelosh.com/blog/2010/09/coming-home-to-vim
+nnoremap <leader>v V`]
+
 " if has('gui_running')
 "   " Settings for GUI mode - i.e. running under Windows
 "
