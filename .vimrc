@@ -133,6 +133,9 @@ imap <F1> <Esc>:set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
 nmap <F2> :.w !pbcopy<CR><CR>
 vmap <F2> :w !pbcopy<CR><CR>
 
+" Remap leader from \ to , which is easier to hit, and a common remapping.
+let mapleader = ","
+
 " if has('gui_running')
 "   " Settings for GUI mode - i.e. running under Windows
 "
