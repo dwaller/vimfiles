@@ -10,3 +10,6 @@
 [submodule ".vim/bundle/vim-blockle"]
 	path = .vim/bundle/vim-blockle
 	url = https://github.com/dwaller/vim-blockle.git
+[submodule ".vim/bundle/ack"]
+	path = .vim/bundle/ack
+	url = git://github.com/mileszs/ack.vim.git

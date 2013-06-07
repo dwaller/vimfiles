@@ -45,6 +45,9 @@ set hidden
 " Automatically load changed files.
 set autoread
 
+" Remap leader from \ to , which is easier to hit, and a common remapping.
+let mapleader = ","
+
 " *** Searching ***
 " Ignore case unless there is some uppercase in the string
 set ignorecase
@@ -58,6 +61,16 @@ set showmatch
 set hlsearch
 " Clear search highlighting
 nnoremap <leader><space> :noh<cr>
+
+" Automatically open, but do not go to (if there are errors) the quickfix
+" window, or close it when is has become empty.
+"
+" Note: Must allow nesting of autocmds to enable any customizations for quickfix
+" buffers.
+" Note: Normally, :cwindow jumps to the quickfix window if the command opens it
+" (but not if it's already open). However, as part of the autocmd, this doesn't
+" seem to happen.
+autocmd QuickFixCmdPost [^l]* nested cwindow
 
 " Jump to matching bracket on tab.
 nnoremap <tab> %
@@ -133,12 +146,13 @@ imap <F1> <Esc>:set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
 nmap <F2> :.w !pbcopy<CR><CR>
 vmap <F2> :w !pbcopy<CR><CR>
 
-" Remap leader from \ to , which is easier to hit, and a common remapping.
-let mapleader = ","
-
 " Reselect the text just pasted so I can perform commands (like indentation) on
 " it.  http://stevelosh.com/blog/2010/09/coming-home-to-vim
 nnoremap <leader>v V`]
+
+" Tag ruby
+nnoremap <leader>t :!ctags -R --languages=ruby<CR>
+
 
 " if has('gui_running')
 "   " Settings for GUI mode - i.e. running under Windows
