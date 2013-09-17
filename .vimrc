@@ -92,6 +92,7 @@ nmap <M-S-Up> :cp<CR>
 nmap <silent> sf :FufFile<CR>
 " Search for a buffer using FuzzyFinder
 nmap <silent> sb :FufBuffer<CR>
+nnoremap <leader>b :CtrlPBuffer<CR>
 
 " Grep for the word under the cursor.
 nnoremap <leader>g :grep '\b<cword>\b' .<CR>
