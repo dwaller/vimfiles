@@ -31,8 +31,7 @@ set expandtab
 
 " Strip trailing whitespace on save - for all file types.
 " See http://vim.wikia.com/wiki/Remove_unwanted_spaces
-" NOT A YAMMER STANDARD
-" autocmd BufWritePre * :%s/\s\+$//e
+autocmd BufWritePre * :%s/\s\+$//e
 
 " Automatic wrapping of comments at 80 characters
 set formatoptions+=c
