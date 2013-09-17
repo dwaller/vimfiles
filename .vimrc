@@ -95,6 +95,7 @@ nnoremap <leader>b :CtrlPBuffer<CR>
 
 " Grep for the word under the cursor.
 nnoremap <leader>g :grep '\b<cword>\b' .<CR>
+nnoremap <leader>a :Ack '\b<cword>\b' .<CR>
 
 " Useful defaults for grepping a Rails app.
 set grepprg=grep\ -InR\ --include=*.erb\ --include=*.rb\ --include=*.rake\ $*
