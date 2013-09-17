@@ -71,6 +71,9 @@ nnoremap <leader><space> :noh<cr>
 " seem to happen.
 autocmd QuickFixCmdPost [^l]* nested cwindow
 
+" Leave insert mode.  Two semicolons are easy to type.
+imap ;; <Esc>
+
 " Jump to matching bracket on tab.
 nnoremap <tab> %
 vnoremap <tab> %
