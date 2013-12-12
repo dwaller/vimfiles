@@ -44,6 +44,9 @@ set hidden
 " Automatically load changed files.
 set autoread
 
+" ag, not ack
+let g:ackprg = 'ag --nogroup --nocolor --column'
+
 " Remap leader from \ to , which is easier to hit, and a common remapping.
 let mapleader = ","
 
