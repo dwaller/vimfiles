@@ -159,6 +159,10 @@ imap <F1> <Esc>:set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
 nmap <F2> :.w !pbcopy<CR><CR>
 vmap <F2> :w !pbcopy<CR><CR>
 
+" Shift+CR adds an 'end' to a Ruby block and puts the cursor back on the
+" previous line.
+imap <S-CR> <CR><CR>end<Esc>-cc
+
 " Reselect the text just pasted so I can perform commands (like indentation) on
 " it.  http://stevelosh.com/blog/2010/09/coming-home-to-vim
 nnoremap <leader>v V`]
