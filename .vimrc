@@ -45,6 +45,9 @@ set hidden
 " Automatically load changed files.
 set autoread
 
+" Test output from xunit tests
+set wildignore=TEST-*.xml
+
 " ag, not ack
 let g:ackprg = 'ag --nogroup --nocolor --column'
 
