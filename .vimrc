@@ -23,6 +23,8 @@ filetype plugin indent on
 au BufNewFile,BufRead Guardfile.* set filetype=ruby
 au BufNewFile,BufRead *.md setlocal spell
 
+set background=dark
+
 " Use the vividchalk colourscheme.  Looks much like TextMate on the Mac.
 colorscheme solarized
 " colorscheme vividchalk
@@ -193,11 +195,11 @@ let g:go_fmt_command = 'goimports'
 "   " See http://stackoverflow.com/questions/235439/vim-80-column-layout-concerns
 "   set colorcolumn=81
 "
-"   " Put temporary files in the temp directory, rather than the current
-"   " directory (so they don't turn up in svn/git status).
-"   " http://stackoverflow.com/questions/4824188/git-ignore-vim-temporary-files
-"   set backupdir=$TEMP//
-"   set directory=$TEMP//
+" Put temporary files in the temp directory, rather than the current
+" directory (so they don't turn up in svn/git status).
+" http://stackoverflow.com/questions/4824188/git-ignore-vim-temporary-files
+set backupdir=$TEMP//,/tmp//
+set directory=$TEMP//,/tmp//
 "
 "   " Force vim to use Slick grep on Windows (rather than 'findstr'), and tell it
 "   " how to interpret the results that it gets (filename + space + line number +
