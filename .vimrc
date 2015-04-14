@@ -23,7 +23,8 @@ filetype plugin indent on
 au BufNewFile,BufRead Guardfile.* set filetype=ruby
 
 " Use the vividchalk colourscheme.  Looks much like TextMate on the Mac.
-colorscheme vividchalk
+colorscheme solarized
+" colorscheme vividchalk
 
 " Tabs are 2 characters, replace tabs with spaces.
 set shiftwidth=2
