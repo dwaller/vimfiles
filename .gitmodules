@@ -1,24 +1,6 @@
-[submodule ".vim/bundle/syntastic"]
-	path = .vim/bundle/syntastic
-	url = git://github.com/scrooloose/syntastic.git
-[submodule ".vim/bundle/vim-rails"]
-	path = .vim/bundle/vim-rails
-	url = git://github.com/tpope/vim-rails.git
-[submodule ".vim/bundle/vim-fugitive"]
-	path = .vim/bundle/vim-fugitive
-	url = git://github.com/tpope/vim-fugitive.git
 [submodule ".vim/bundle/vim-blockle"]
 	path = .vim/bundle/vim-blockle
 	url = https://github.com/dwaller/vim-blockle.git
-[submodule ".vim/bundle/ack"]
-	path = .vim/bundle/ack
-	url = git://github.com/mileszs/ack.vim.git
-[submodule ".vim/bundle/ctrlp.vim"]
-	path = .vim/bundle/ctrlp.vim
-	url = git://github.com/kien/ctrlp.vim.git
 [submodule ".vim/bundle/align"]
         path = .vim/bundle/align
         url = git@github.com:vim-scripts/Align.git
-[submodule ".vim/bundle/puppet"]
-	path = .vim/bundle/puppet
-	url = git://github.com/rodjek/vim-puppet.git
