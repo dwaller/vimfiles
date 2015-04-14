@@ -165,6 +165,9 @@ nnoremap <leader>v V`]
 " Tag ruby
 nnoremap <leader>t :!ctags -R --languages=ruby<CR>
 
+" Golang settings
+" Format with goimports instead of gofmt
+let g:go_fmt_command = 'goimports'
 
 " if has('gui_running')
 "   " Settings for GUI mode - i.e. running under Windows
