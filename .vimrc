@@ -21,6 +21,7 @@ filetype plugin indent on
 
 " Recognise Guardfiles as ruby
 au BufNewFile,BufRead Guardfile.* set filetype=ruby
+au BufNewFile,BufRead *.md setlocal spell
 
 " Use the vividchalk colourscheme.  Looks much like TextMate on the Mac.
 colorscheme solarized
