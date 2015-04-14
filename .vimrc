@@ -49,7 +49,7 @@ set autoread
 set wildignore=TEST-*.xml
 
 " ag, not ack
-let g:ackprg = 'ag --nogroup --nocolor --column'
+let g:ackprg = "ag --nogroup --nocolor --column"
 
 " Remap leader from \ to , which is easier to hit, and a common remapping.
 let mapleader = ","
@@ -97,14 +97,15 @@ nmap <C-Up> <C-y>
 nmap <M-S-Down> :cn<CR>
 nmap <M-S-Up> :cp<CR>
 
+let g:ctrlp_cmd = 'CtrlPMixed'
 " Search for a file using FuzzyFinder
 nmap <silent> sf :FufFile<CR>
 " Search for a buffer using FuzzyFinder
 nmap <silent> sb :FufBuffer<CR>
-nnoremap <leader>b :CtrlPBuffer<CR>
+nmap <leader>b :CtrlPBuffer<CR>
 
 " Grep for the word under the cursor.
-nnoremap <leader>g :grep '\b<cword>\b' .<CR>
+nmap <leader>g :grep '\b<cword>\b' .<CR>
 nnoremap <leader>a :Ack '\b<cword>\b' .<CR>
 
 " Useful defaults for grepping a Rails app.
