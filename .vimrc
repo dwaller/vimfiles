@@ -1,9 +1,31 @@
-" Load all plugins
-call pathogen#infect()
-" And build help for them
-call pathogen#helptags()
+" Of course
+set nocompatible
 
-set nocompatible  " We don't want vi compatibility.
+" Required Vundle setup
+filetype off
+set runtimepath+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-rails'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'mileszs/ack.vim'
+Plugin 'kien/ctrlp.vim'
+Plugin 'rodjek/vim-puppet'
+Plugin 'fatih/vim-go'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'scrooloose/syntastic'
+Plugin 'Align'
+Plugin 'l9' " required by something!
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+" Enable filetype detection and filetype specific plugins and indentation
+filetype plugin indent on    " required
+
 " Enable the backspace key in insert mode
 " See http://vim.wikia.com/wiki/Backspace_and_delete_problems
 set backspace=indent,eol,start
@@ -14,10 +36,8 @@ augroup myvimrc
     au BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so $MYVIMRC | if has('gui_running') | so $MYVIMRC | endif
 augroup END
 
-" Syntax higlighting on; enable filetype detection and filetype specific
-" plugins and indentation
+" Syntax higlighting on
 syntax on
-filetype plugin indent on
 
 " Recognise Guardfiles as ruby
 au BufNewFile,BufRead Guardfile.* set filetype=ruby
