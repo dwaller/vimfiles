@@ -119,6 +119,9 @@ nmap <C-Up> <C-y>
 " Ctrl+Shift+ up/down to move through grep matches
 nmap <M-S-Down> :cn<CR>
 nmap <M-S-Up> :cp<CR>
+" Ctrl+Shift+ j/k to move through grep matches when in a strict mood
+nmap <M-S-j> :cn<CR>
+nmap <M-S-k> :cp<CR>
 
 let g:ctrlp_cmd = 'CtrlPMixed'
 " Search for a file using FuzzyFinder
