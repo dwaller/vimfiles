@@ -14,6 +14,7 @@ Plugin 'tpope/vim-rails'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'mileszs/ack.vim'
 Plugin 'kien/ctrlp.vim'
+Plugin 'majutsushi/tagbar'
 Plugin 'rodjek/vim-puppet'
 Plugin 'fatih/vim-go'
 Plugin 'airblade/vim-gitgutter'
@@ -179,7 +180,10 @@ endif
 " Close vim if the only window left open is a NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
-nmap <F9> :TagbarToggle<CR>
+" Show tags in current file in left sidebar
+" :h tagbar
+let g:tagbar_left = 1
+nnoremap <silent> <Leader>tb :TagbarToggle<CR>
 
 " Make the unnamed register the same as the clipboard register.  The unnamed
 " register is where text is stored when you yank it.  By making it the same
