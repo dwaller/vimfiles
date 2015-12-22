@@ -21,6 +21,8 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'scrooloose/syntastic'
 Plugin 'Align'
 Plugin 'l9' " required by something!
+" colourschemes
+Plugin 'twerth/ir_black'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -44,11 +46,12 @@ syntax on
 au BufNewFile,BufRead Guardfile.* set filetype=ruby
 au BufNewFile,BufRead *.md setlocal spell
 
-set background=dark
 
 " Use the vividchalk colourscheme.  Looks much like TextMate on the Mac.
-colorscheme solarized
+" colorscheme solarized
 " colorscheme vividchalk
+colorscheme grb256
+set background=dark
 
 " Tabs are 2 characters, replace tabs with spaces.
 set shiftwidth=2
