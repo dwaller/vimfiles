@@ -72,7 +72,9 @@ set autoread
 set wildignore=TEST-*.xml
 
 " ag, not ack
-let g:ackprg = "ag --nogroup --nocolor --column"
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
 
 " Remap leader from \ to , which is easier to hit, and a common remapping.
 let mapleader = ","
