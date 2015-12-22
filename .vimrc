@@ -110,6 +110,12 @@ imap ;; <Esc>
 nnoremap <tab> %
 vnoremap <tab> %
 
+" Training mode
+noremap   <Up>     <NOP>
+noremap   <Down>   <NOP>
+noremap   <Left>   <NOP>
+noremap   <Right>  <NOP>
+
 " F7 and F8 to move to next/previous buffer
 nmap <F7> :bp<CR>
 nmap <F8> :bn<CR>
