@@ -50,7 +50,6 @@ syntax on
 au BufNewFile,BufRead Guardfile.* set filetype=ruby
 au BufNewFile,BufRead *.md setlocal spell
 
-
 " Use the vividchalk colourscheme.  Looks much like TextMate on the Mac.
 " colorscheme solarized
 " colorscheme vividchalk
@@ -75,6 +74,12 @@ set hidden
 
 " Automatically load changed files.
 set autoread
+
+" Autosave.
+" autowriteall (see vim help) saves on various motions around buffers.
+" Also save whenever leaving vim.
+set autowriteall
+:au FocusLost * :wa
 
 " Test output from xunit tests
 set wildignore=TEST-*.xml
