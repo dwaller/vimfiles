@@ -1,6 +1,10 @@
 " Of course
 set nocompatible
 
+" Make 'Y' yank from the cursor to the end of the line.  As the help file says
+" 'which is more logical,  but not Vi-compatible'
+:map Y y$
+
 " Required Vundle setup
 filetype off
 set runtimepath+=~/.vim/bundle/Vundle.vim
