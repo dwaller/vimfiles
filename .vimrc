@@ -24,6 +24,7 @@ Plugin 'fatih/vim-go'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'scrooloose/syntastic'
 Plugin 'Align'
+Plugin 'AndrewRadev/sideways.vim'
 Plugin 'l9' " required by something!
 " colourschemes
 Plugin 'twerth/ir_black'
@@ -128,6 +129,14 @@ noremap   <Up>     <NOP>
 noremap   <Down>   <NOP>
 noremap   <Left>   <NOP>
 noremap   <Right>  <NOP>
+
+" Shortcuts for Sideways.vim
+nnoremap <c-h> :SidewaysLeft<cr>
+nnoremap <c-l> :SidewaysRight<cr>
+omap aa <Plug>SidewaysArgumentTextobjA
+xmap aa <Plug>SidewaysArgumentTextobjA
+omap ia <Plug>SidewaysArgumentTextobjI
+xmap ia <Plug>SidewaysArgumentTextobjI
 
 " F7 and F8 to move to next/previous buffer
 nmap <F7> :bp<CR>
