@@ -152,10 +152,10 @@ imap <F2> <C-o>:w<CR>
 " Ctrl+ up/down to scroll
 nmap <C-Down> <C-e>
 nmap <C-Up> <C-y>
-" Ctrl+Shift+ up/down to move through grep matches
+" Alt+Shift+ up/down to move through grep matches
 nmap <M-S-Down> :cn<CR>
 nmap <M-S-Up> :cp<CR>
-" Ctrl+Shift+ j/k to move through grep matches when in a strict mood
+" Alt+Shift+ j/k to move through grep matches when in a strict mood
 nmap <M-S-j> :cn<CR>
 nmap <M-S-k> :cp<CR>
 
