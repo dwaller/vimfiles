@@ -17,7 +17,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-rails'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'mileszs/ack.vim'
-Plugin 'kien/ctrlp.vim'
+Plugin 'junegunn/fzf.vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'rodjek/vim-puppet'
 Plugin 'fatih/vim-go'
@@ -33,6 +33,9 @@ Plugin 'twerth/ir_black'
 call vundle#end()            " required
 " Enable filetype detection and filetype specific plugins and indentation
 filetype plugin indent on    " required
+
+" Add fzf binary to runtime path
+set rtp+=/usr/local/opt/fzf
 
 " Enable the backspace key in insert mode
 " See http://vim.wikia.com/wiki/Backspace_and_delete_problems
@@ -153,12 +156,26 @@ nmap <M-S-Up> :cp<CR>
 nmap <M-S-j> :cn<CR>
 nmap <M-S-k> :cp<CR>
 
-let g:ctrlp_cmd = 'CtrlPMixed'
-" Search for a file using FuzzyFinder
-nmap <silent> sf :FufFile<CR>
-" Search for a buffer using FuzzyFinder
-nmap <silent> sb :FufBuffer<CR>
-nmap <leader>b :CtrlPBuffer<CR>
+nmap <leader>b :Buffers<CR>
+nmap <C-P> :Files<CR>
+" Give FZF a history directory, so that Ctrl+P will repeat the last file search
+" (And Ctrl+N the next file search if you go too far back.)
+let g:fzf_history_dir = '~/.fzf_history'
+
+let g:fzf_colors =
+\ { 'fg':      ['fg', 'Normal'],
+  \ 'bg':      ['bg', 'Normal'],
+  \ 'hl':      ['fg', 'Comment'],
+  \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+  \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+  \ 'hl+':     ['fg', 'Statement'],
+  \ 'info':    ['fg', 'PreProc'],
+  \ 'border':  ['fg', 'Ignore'],
+  \ 'prompt':  ['fg', 'Conditional'],
+  \ 'pointer': ['fg', 'Exception'],
+  \ 'marker':  ['fg', 'Keyword'],
+  \ 'spinner': ['fg', 'Label'],
+  \ 'header':  ['fg', 'Comment'] }
 
 " Grep for the word under the cursor.
 nmap <leader>g :grep '\b<cword>\b' .<CR>
